@@ -17,7 +17,19 @@ namespace LibraryApp
         public string Title
         {
             get { return title; }
-            set { title = value; }
+            set 
+            {  
+                // check if incoming char is digit
+                if (!value.Any(char.IsDigit))
+                {
+                    title = value;
+                }
+                else
+                {
+                    Console.WriteLine("Cannot enter number for title");
+                }
+
+            }
         }
 
         public string Author
